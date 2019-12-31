@@ -1,0 +1,43 @@
+git clone https://github.com/tal2k4xj/microservices-java
+
+Create new project on OCP:
+oc new-project tutorial
+
+Allow root containers : oc adm policy add-scc-to-user anyuid -z default
+
+Create backend: 
+oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/backend/kubernetes/deployment.yml
+oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/backend/kubernetes/service.yml
+
+Create hello-springboot:
+oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/hello-springboot/kubernetes/deployment.yml
+oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/hello-springboot/kubernetes/service.yml
+
+Create hello-microprofile: 
+oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/hello-microprofile/kubernetes/deployment.yml
+oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/hello-microprofile/kubernetes/service.yml
+
+Create api-gateway:
+oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/api-gateway/kubernetes/deployment.yml
+oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/api-gateway/kubernetes/service.yml
+
+Check everything was created :
+oc get all
+
+Delete pod to see kubernetes functionality :
+oc delete pod hello-springboot-<random-number>
+
+Expose gateway service:
+oc expose service api-gateway
+
+Distributed tracing with OpenTracing: 
+oc process -f http://raw.githubusercontent.com/jaegertracing/jaeger-openshift/master/all-in-one/jaeger-all-in-one-template.yml | oc create -f -
+
+Use ConfigMap:
+oc set env deployment --all --from=configmap/jaeger-config
+
+Delete all:
+oc delete deploy --all
+oc delete svc --all
+oc delete routes --all
+
