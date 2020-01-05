@@ -1,12 +1,13 @@
-# Exercise 1: Deploying an application using S2I & triggers
+# Exercise 1: Deploying your first Openshift application
 
-In this exercise, you'll deploy a simple Node.js Express application - "Example Health". Example Health is a simple UI for a patient health records system. We'll use this example to demonstrate key OpenShift features throughout this workshop. You can find the sample application GitHub repository here: [https://github.com/IBM/node-s2i-openshift](https://github.com/IBM/node-s2i-openshift)
+In this exercise you will deploy a simple Springboot application. we will use this app to demonstrate key Openshift features.
+Also this example will be a build up for the next exercises where we will deploy a Cloud Native application.
 
-## Deploy Example Health
+## Deploy Springboot app
 
 Access your cluster on the [IBM Cloud clusters dashboard](https://cloud.ibm.com/kubernetes/clusters). Click the `OpenShift web console` button on the top-right. (This is a pop-up so you'll need to white list this site.)
 
-Create a project, you can title it whatever you like, we suggest "example-health."
+Create a project, you can title it whatever you like, we suggest "tutorial"
 
 ![Create Project](./assets/createproject.png)
 
@@ -16,7 +17,7 @@ Click on your new project. You should see a view that looks like this:
 
 Click on the browse catalog button and scroll down to the `Node.js` image. Click on that catalog button.
 
-![Node](./assets/node.png)
+![Node](./assets/java.png)
 
 Click through to the second step for configuration, and choose `advanced options`. \( a blue hyperlink on the bottom line \)
 
