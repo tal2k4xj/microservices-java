@@ -1,5 +1,4 @@
-
-#Prerequisite
+# Prerequisite
 
 Before we will start the exercise you will need to go to IBM Cloud Shell to get ready to use environment : https://workshop.shell.cloud.ibm.com/
 You will have to login with your IBM Cloud user and then use the password : ikslab
