@@ -1,3 +1,4 @@
+
 #Prerequisite
 
 Before we will start the exercise you will need to go to IBM Cloud Shell to get ready to use environment : https://workshop.shell.cloud.ibm.com/
@@ -243,6 +244,7 @@ $ oc delete svc --all
 $ oc delete routes --all
 $ oc delete configmap --all
 ```
+
 # Exercise 3: Understand Buildconfig Strategy Options
 
 ## What Is a Build?
