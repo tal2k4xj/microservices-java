@@ -1,4 +1,4 @@
-FROM openjdk:8u171-jdk-alpine3.7
+FROM openjdk:8-jdk-alpine
 ARG REVISION
 COPY target/hello-springboot-${REVISION}.jar app.jar
-CMD ["/usr/bin/java", "-jar", "/app.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
