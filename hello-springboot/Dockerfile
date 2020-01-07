@@ -1,5 +1,4 @@
 FROM openjdk:11-jdk-slim
-WORKDIR /home/demo
 ARG REVISION
 COPY target/hello-springboot-${REVISION}.jar app.jar
-ENTRYPOINT [“java”,”-jar”,”app.jar”]
+CMD ["/usr/bin/java", "-jar", "/app.jar"]
