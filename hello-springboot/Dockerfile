@@ -1,5 +1,5 @@
-FROM fabric8/java-alpine-openjdk8-jdk
-ENV JAVA_APP_JAR hello-springboot-1.0.jar
-ENV AB_OFF true
-ENV JAEGER_SERVICE_NAME hello-springboot
-ADD target/hello-springboot-1.0.jar /deployments/
+FROM openjdk:11-jdk-slim
+WORKDIR /home/demo
+ARG REVISION
+COPY target/hello-springboot-${REVISION}.jar app.jar
+ENTRYPOINT [“java”,”-jar”,”app.jar”]
