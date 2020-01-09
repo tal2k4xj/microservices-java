@@ -280,11 +280,11 @@ Access your cluster on the [IBM Cloud clusters dashboard](https://cloud.ibm.com/
 
 Create a project, you can title it whatever you like, we suggest "example-health."
 
-![Create Project](./assets/createproject.png)
+![Create Project](./assets/createprojecthealth.png)
 
 Click on your new project. You should see a view that looks like this:
 
-![Project View](./assets/projectview.png)
+![Project View](./assets/projectviewhealth.png)
 
 Click on the browse catalog button and scroll down to the `Node.js` image. Click on that catalog button.
 
