@@ -6,21 +6,21 @@ IBMid: your email
 
 ![getcluster](./assets/getcluster.png)
 
-Now go to https://cloud.ibm.com/ and select the new account (IBM-#######):
+Now go to https://cloud.ibm.com/ and select the new account (####### - IBM):
 
 ![selectaccount](./assets/selectaccount.png)
 
 Select the clusters section:
 
-![selectaccount](./assets/selectclusters.png)
+![selectclusters](./assets/selectclusters.png)
 
 Select your new Openshift cluster:
 
-![selectaccount](./assets/selectcluster.png)
+![selectcluster](./assets/selectcluster.png)
 
 Open webconsole:
 
-![selectaccount](./assets/openwebconsole.png)
+![openwebconsole](./assets/openwebconsole.png)
 
 Before we will start the exercise you will need to go to IBM Cloud Shell to get ready to use environment : https://workshop.shell.cloud.ibm.com/
 You will have to login with your IBM Cloud user and then use the password : ikslab
