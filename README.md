@@ -85,7 +85,7 @@ To change that we can create something called Route which is extension that Open
 
 ![Create Route](./assets/createroute.png)
  
-Add the path `/api` to create a specific link to our application api path.
+Add the path `/api/greeting` to create a specific link to our application api path.
 Scroll down and click Create.
 
 ![Add Path Create](./assets/apipath.png)
@@ -264,6 +264,7 @@ $ oc delete deploy --all
 $ oc delete svc --all
 $ oc delete routes --all
 $ oc delete configmap --all
+$ oc delete project tutorial
 ```
 
 # Exercise 3: Understand Buildconfig Strategy Options
