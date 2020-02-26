@@ -565,7 +565,7 @@ When the pipeline build finish you can go back to the Cloud Shell and continue t
 When the pipeline has finished building, deploy the new application using new-app and expose its route:
 ```
 $ oc new-app mavenapp
-$ oc expose svc/wildfly
+$ oc expose svc/mavenapp
 ```
 
 Using your browser, navigate to the route for the application:
