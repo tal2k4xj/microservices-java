@@ -18,20 +18,18 @@ Select your new Openshift cluster:
 
 ![selectcluster](./assets/selectcluster.png)
 
-Open webconsole:
+Before we will start the exercise you will need to set a terminal for CLI communications.
+Click on the Actions -> Web Terminal:
 
-![openwebconsole](./assets/openwebconsole.png)
+![addwebternimal](./assets/addwebternimal.png)
 
-Before we will start the exercise you will need to go to IBM Cloud Shell to get ready to use environment : https://workshop.shell.cloud.ibm.com/
-You will have to login with your IBM Cloud user and then use the password : ikslab
-
-![setshell](./assets/setshell.png)
-
-1) Select the account with the openshift cluster.
-2) Start the terminal.
+It will install a webternimal and in few seconds you will be able to open it by click again on the web ternimal button.
 
 Now that you have terminal to use with everything you needed install.
 Go to your cluster [IBM Cloud clusters dashboard](https://cloud.ibm.com/kubernetes/clusters) Click on the cluster and then on the `Openshift web console`.
+
+![openwebconsole](./assets/openwebconsole.png)
+
 Copy the login command from OpenShift web console :
 
 ![openlogin](./assets/openlogin.png)
@@ -112,7 +110,11 @@ In the next two exercises we are going to use few of the factors including: Conf
 
 So for the first step we would like to create our Gateway which is using Apache Camel to route our requests asynchronously between two other microservices (Springboot and Microprofile) in order to have one way to interact our application using api.
 
-To do that we will use the cloud shell and not the UI as we did before, go to the [Shell](https://workshop.shell.cloud.ibm.com/) and paste the following commands:
+To do that we will use the cloud shell and not the UI as we did before, go to the Web Ternimal and paste the following commands:
+
+```
+$ oc project tutorial
+```
 
 ```
 $ oc create -f http://raw.githubusercontent.com/tal2k4xj/microservices-java/master/api-gateway/kubernetes/deployment.yml
@@ -174,7 +176,7 @@ You will probably get this :
 What just happend? we accessed gateway that automatically send two asynchronous requests to both services Springboot and Microprofile, then both services try to connect to our backend services which is not able to run (dont know if you noticed :)), which cause them to fallback and send their own hello message instead of the backend hello message.
 This way we always make sure that our Microservice is resilient and will always work even if he gets errors / timeouts from another services.
 
-To get the backend hello message we want to help the backend pod to run, to do that we will need to run the following command :
+To get the backend hello message we want to help the backend pod to run, to do that we will need to run the following command:
 ```
 $ oc adm policy add-scc-to-user anyuid -z default
 ```
@@ -563,7 +565,7 @@ When the pipeline build finish you can go back to the Cloud Shell and continue t
 When the pipeline has finished building, deploy the new application using new-app and expose its route:
 ```
 $ oc new-app mavenapp
-$ oc expose svc/mavenapp
+$ oc expose svc/wildfly
 ```
 
 Using your browser, navigate to the route for the application:
