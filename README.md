@@ -1,6 +1,6 @@
 # Prerequisite
 
-Get openshift cluster - go to https://oscicd.mybluemix.net/
+Get openshift cluster - go to https://ocpbankdiscount.mybluemix.net
 Lab Key: oslab
 IBMid: your email
 
