@@ -6,7 +6,7 @@ IBMid: your email
 
 ![getcluster](./assets/getcluster.png)
 
-Now go to https://cloud.ibm.com/ and select the new account (####### - IBM):
+Now go to https://cloud.ibm.com/ and select the new account (####### - Advowork):
 
 ![selectaccount](./assets/selectaccount.png)
 
