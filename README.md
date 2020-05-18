@@ -1,5 +1,7 @@
 # Prerequisite
 
+Understand basics of Kubernetes: https://developer.ibm.com/series/kubernetes-learning-path/
+
 Get openshift cluster - go to https://ocpbankdiscount.mybluemix.net
 Lab Key: oslab
 IBMid: your email
